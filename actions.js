@@ -41,10 +41,10 @@ function thumDownComment(id) {
   }
 }
 const boundAddComment = text => dispatch(addComment(text));
-const boundEditomment = (id,text) => dispatch(addComment(id,text));
-const boundRemoveComment = id => dispatch(addComment(id));
-const boundThumbUpComment = id => dispatch(addComment(id));
-const boundThumDownComment = id => dispatch(addComment(id));
+const boundEditomment = (id,text) => dispatch(editComment(id,text));
+const boundRemoveComment = id => dispatch(removeComment(id));
+const boundThumbUpComment = id => dispatch(thumbUpComment(id));
+const boundThumDownComment = id => dispatch(thumDownComment(id));
 
 boundAddComment('New comment!');
 boundEditomment(123,'Changed comment');
