@@ -13,10 +13,10 @@ function addComment(text) {
       id: uuid.v4()
   }
 }
-function editComment(id) {
+function editComment(id,text) {
   return {
       type: EDIT_COMMENT,
-      text,
+      text: text,
       id: id
   }
 }
@@ -41,13 +41,13 @@ function thumDownComment(id) {
   }
 }
 const boundAddComment = text => dispatch(addComment(text));
-const boundEditomment = id => dispatch(addComment(id));
+const boundEditomment = (id,text) => dispatch(addComment(id,text));
 const boundRemoveComment = id => dispatch(addComment(id));
 const boundThumbUpComment = id => dispatch(addComment(id));
 const boundThumDownComment = id => dispatch(addComment(id));
 
 boundAddComment('New comment!');
-boundEditomment('Changed comment');
+boundEditomment(123,'Changed comment');
 boundRemoveComment(123);
 boundThumbUpComment(321);
 boundThumDownComment(345);
